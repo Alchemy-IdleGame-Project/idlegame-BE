@@ -72,43 +72,6 @@ describe(' routes', () => {
     expect(data.body).toEqual([expectation]);
   });
 
-  // test('Put a save file to our table', async () => {
-  //   const unlockedBuildings = 
-  //   {
-  //     'lumberyard': false,
-  //     'windmill': true,
-  //     'mine': true,
-  //     'watermill': true,
-  //     'sawmill': true,
-  //     'farm': false,
-  //     'blacksmith': false,
-  //     'tavern': false,
-  //     'castle': false,
-  //   };
-  //   const expectation = {
-  //     'owner_id': 2,
-  //     'lumberyard': false,
-  //     'windmill': true,
-  //     'mine': true,
-  //     'watermill': true,
-  //     'sawmill': true,
-  //     'farm': false,
-  //     'blacksmith': false,
-  //     'tavern': false,
-  //     'castle': false,
-  //     'unlock_id': 2,
-  //   };
-  //   const data = await fakeRequest(app)
-  //     .put('/api/unlocked')
-  //     .send(unlockedBuildings)
-  //     .set('Authorization', token)
-  //     .expect('Content-Type', /json/)
-  //     .expect(200);
-
-  //   expect(data.body).toEqual([expectation]);
-  // });
-
-
 
 });
 
