@@ -28,10 +28,10 @@ async function run() {
                     blacksmith BOOLEAN NOT NULL,
                     tavern BOOLEAN NOT NULL,
                     castle BOOLEAN NOT NULL,
-                    gold INT NOT NULL,
-                    prestige INT NOT NULL,
-                    gametime INT NOT NULL,
-                    clicks INT NOT NULL,
+                    gold INTEGER NOT NULL,
+                    prestige INTEGER NOT NULL,
+                    gametime INTEGER NOT NULL,
+                    clicks INTEGER NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
