@@ -11,6 +11,10 @@ module.exports = [
     blacksmith: false,
     tavern: true,
     castle: false,
+    gold: 123456,
+    prestige: 2,
+    gametime: 360,
+    clicks: 1500
   }
 ];
 
