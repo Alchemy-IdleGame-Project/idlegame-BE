@@ -4,11 +4,6 @@ const fakeRequest = require('supertest');
 const app = require('../lib/app');
 const client = require('../lib/client');
 
-
-
-
-
-
 describe(' routes', () => {
   let token;
   beforeAll(async () => {
@@ -45,6 +40,10 @@ describe(' routes', () => {
       'blacksmith': false,
       'tavern': false,
       'castle': false,
+      'gold': 123456,
+      'prestige': 2,
+      'gametime': 360,
+      'clicks': 1500,
     };
     const expectation = {
       'owner_id': 2,
@@ -57,6 +56,10 @@ describe(' routes', () => {
       'blacksmith': false,
       'tavern': false,
       'castle': false,
+      'gold': 123456,
+      'prestige': 2,
+      'gametime': 360,
+      'clicks': 1500,
       'unlock_id': 2,
     };
     const data = await fakeRequest(app)
@@ -68,9 +71,6 @@ describe(' routes', () => {
 
     expect(data.body).toEqual([expectation]);
   });
-
-
-
 
 
 });

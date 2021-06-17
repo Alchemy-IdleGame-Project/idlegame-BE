@@ -27,10 +27,10 @@ async function run() {
     await Promise.all(
       unlocks.map(unlock => {
         return client.query(`
-                    INSERT INTO unlocks (lumberyard, windmill, mine, watermill, sawmill, farm, blacksmith, tavern, castle, owner_id)
-                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);
+                    INSERT INTO unlocks (lumberyard, windmill, mine, watermill, sawmill, farm, blacksmith, tavern, castle, gold, prestige, gametime, clicks, owner_id)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
                 `,
-        [unlock.lumberyard, unlock.windmill, unlock.mine, unlock.watermill, unlock.sawmill, unlock.farm, unlock.blacksmith, unlock.tavern, unlock.castle, user.id]);
+        [unlock.lumberyard, unlock.windmill, unlock.mine, unlock.watermill, unlock.sawmill, unlock.farm, unlock.blacksmith, unlock.tavern, unlock.castle, unlock.gold, unlock.prestige, unlock.gametime, unlock.clicks, user.id]);
       })
     );
     
